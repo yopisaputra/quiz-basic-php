@@ -1,6 +1,6 @@
 <?php
 
-function habisDibagiTiga($n)
+function luasLingkaran($n)
 {
   $r = $n/3;
   $l = 3.14 * $r * $r;
@@ -8,7 +8,7 @@ function habisDibagiTiga($n)
   echo "$formatL <br>";
 }
 
-function habisDibagiLima($n)
+function kelilingLingkaran($n)
 {
   $r = $n/5;
   $k = 3.14 * 2* $r;
@@ -16,7 +16,7 @@ function habisDibagiLima($n)
   echo "$formatK <br>";
 }
 
-function habisDibagiTigaLima($n)
+function luasPersegiPanjang($n)
 {
   $p = $n/3;
   $l = $n/5;
@@ -28,25 +28,22 @@ function habisDibagiTigaLima($n)
 for ($x = 1; $x <= 100; $x++) {
 
   if (($x % 3 == 0) && ($x % 5 == 0)) {
-    echo habisDibagiTigaLima($x);
+    echo luasPersegiPanjang($x);
     continue;
 
-  } else if ($x % 5 == 0) {
-    echo habisDibagiLima($x);
+  } else if ($x % 3 == 0) {
+    echo luasLingkaran($x);
     continue;
 
-  } elseif ($x % 3 == 0) {
-    echo habisDibagiTiga($x);
+  } elseif ($x % 5 == 0) {
+    echo kelilingLingkaran($x);
     continue;
 
   } else {
     echo number_format($x, 2);
     echo "<br>";
   }
-  
+
 }
-
-
-
 
 ?>
